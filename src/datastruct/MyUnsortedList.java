@@ -74,8 +74,8 @@ public class MyUnsortedList<E> implements UnsortedList<E> {
 
         size++;
         Link<E> inserted = new Link<>(elem);
-        prevLink.next = inserted;
         Link<E> nextLink = prevLink.next;
+        prevLink.next = inserted;
         inserted.next = nextLink;
     }
 
